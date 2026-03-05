@@ -16,7 +16,7 @@ const ASSETS = {
   fanCommunity: "https://d2xsxph8kpxj0f.cloudfront.net/310519663398957368/TR9F8icgEr5fDHtduajcGC/fan_community-KWfNVLUAPFntNxB55XiDWX.webp",
   musicTexture: "https://d2xsxph8kpxj0f.cloudfront.net/310519663398957368/TR9F8icgEr5fDHtduajcGC/music_texture-R2eZfEH8xoabhnSeSDKCzr.webp",
   scotlandStage:"https://d2xsxph8kpxj0f.cloudfront.net/310519663398957368/TR9F8icgEr5fDHtduajcGC/scotland_stage-MaBUxMMu3Zbt2ovwtZRREZ.webp",
-  callumPhoto:  "https://d2xsxph8kpxj0f.cloudfront.net/310519663398957368/TR9F8icgEr5fDHtduajcGC/callum_official_photo1_56d32b62.webp",
+  callumPhoto:  "https://d2xsxph8kpxj0f.cloudfront.net/310519663398957368/TR9F8icgEr5fDHtduajcGC/callum_denim_1883_be68d5cf.jpeg",
   indiVinyl:    "https://d2xsxph8kpxj0f.cloudfront.net/310519663398957368/TR9F8icgEr5fDHtduajcGC/callum_indi_vinyl_11908bd5.jpg",
 };
 
