@@ -8,8 +8,7 @@
  */
 
 import { useEffect, useRef, useState } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import type { Language } from "@/contexts/LanguageContext";
+import { useLanguage, type Language } from "@/contexts/LanguageContext";
 
 // ── CDN asset URLs ────────────────────────────────────────────────────────────
 const ASSETS = {
@@ -78,9 +77,14 @@ const ChevronRight  = () => <svg viewBox="0 0 24 24" fill="none" stroke="current
 const ExternalLink  = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>;
 
 // ── Language toggle pill ──────────────────────────────────────────────────────
+const LANG_OPTIONS: { code: Language; label: string; flag: string }[] = [
+  { code: "en", label: "EN", flag: "🇬🇧" },
+  { code: "pt", label: "PT", flag: "🇧🇷" },
+  { code: "es", label: "ES", flag: "🇪🇸" },
+];
+
 function LangToggle() {
   const { lang, setLang } = useLanguage();
-  const options: Language[] = ["en", "pt"];
   return (
     <div style={{
       display: "flex",
@@ -90,25 +94,26 @@ function LangToggle() {
       padding: "2px",
       gap: "2px",
     }}>
-      {options.map(l => (
+      {LANG_OPTIONS.map(({ code, label, flag }) => (
         <button
-          key={l}
-          onClick={() => setLang(l)}
+          key={code}
+          onClick={() => setLang(code)}
           style={{
             fontFamily: "'Space Grotesk', sans-serif",
             fontSize: "0.7rem",
             fontWeight: 700,
-            letterSpacing: "0.1em",
+            letterSpacing: "0.08em",
             textTransform: "uppercase",
-            padding: "0.3rem 0.7rem",
+            padding: "0.3rem 0.6rem",
             border: "none",
             cursor: "pointer",
             transition: "all 0.15s ease",
-            backgroundColor: lang === l ? "#b5ff3a" : "transparent",
-            color: lang === l ? "#0d0d0d" : "#888",
+            backgroundColor: lang === code ? "#b5ff3a" : "transparent",
+            color: lang === code ? "#0d0d0d" : "#888",
+            whiteSpace: "nowrap",
           }}
         >
-          {l === "en" ? "🇬🇧 EN" : "🇵🇹 PT"}
+          {flag} {label}
         </button>
       ))}
     </div>
