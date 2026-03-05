@@ -257,8 +257,6 @@ export default function Home() {
             { num: "#1",     key: "stats.scotland" },
             { num: "#4",     key: "stats.uk" },
             { num: "3",      key: "stats.albums" },
-            { num: "1.6K",   key: "stats.fanclub" },
-            { num: "13.5K",  key: "stats.tiktok" },
           ].map(({ num, key }, i) => (
             <div key={i} style={{ opacity: statsSection.inView ? 1 : 0, transform: statsSection.inView ? "translateY(0)" : "translateY(20px)", transition: `all 0.5s ease ${i * 0.1}s` }}>
               <div className="display-headline" style={{ fontSize: "3rem", color: "#b5ff3a", lineHeight: 1 }}>{num}</div>
