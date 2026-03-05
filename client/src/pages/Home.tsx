@@ -174,10 +174,10 @@ export default function Home() {
               onMouseLeave={e => (e.currentTarget.style.color = "#888")}
             >{t(key)}</a>
           ))}
-          <LangToggle />
           <a href={SOCIALS.callumWebsite} target="_blank" rel="noopener noreferrer" className="btn-lime" style={{ fontSize: "0.85rem", padding: "0.5rem 1.2rem" }}>
             {t("nav.officialSite")}
           </a>
+          <LangToggle />
         </div>
 
         {/* Mobile: lang toggle + hamburger */}
