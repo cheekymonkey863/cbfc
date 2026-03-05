@@ -303,32 +303,19 @@ export default function Home() {
           <h2 className="display-headline" style={{ fontSize: "clamp(3rem, 8vw, 7rem)", lineHeight: 0.9, marginBottom: "3rem", opacity: albumSection.inView ? 1 : 0, transform: albumSection.inView ? "translateY(0)" : "translateY(30px)", transition: "all 0.6s ease 0.1s" }}>
             {t("album.title")}
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "4rem", alignItems: "start" }} className="md:grid-cols-2-auto grid-cols-1">
-            <div style={{ opacity: albumSection.inView ? 1 : 0, transform: albumSection.inView ? "translateY(0)" : "translateY(30px)", transition: "all 0.6s ease 0.2s" }}>
-              <img src={ASSETS.indiVinyl} alt="INDI Album — Callum Beattie" style={{ width: "280px", height: "280px", objectFit: "cover" }} />
-              <div style={{ marginTop: "1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-                <a href={SOCIALS.callumSpotify} target="_blank" rel="noopener noreferrer" className="btn-lime" style={{ textAlign: "center", justifyContent: "center" }}>
-                  <SpotifyIcon /> {t("album.streamBtn")}
-                </a>
-                <a href="https://callumbeattiemusic.com/home/" target="_blank" rel="noopener noreferrer" className="btn-outline-lime" style={{ textAlign: "center", justifyContent: "center" }}>
-                  {t("album.orderBtn")}
-                </a>
-              </div>
-            </div>
-            <div style={{ opacity: albumSection.inView ? 1 : 0, transform: albumSection.inView ? "translateX(0)" : "translateX(30px)", transition: "all 0.6s ease 0.3s" }}>
-              <p className="ui-label" style={{ color: "#888", marginBottom: "1.5rem" }}>{t("album.tracklist")}</p>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                {TRACKS.map((track, i) => (
-                  <div key={i} style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "0.75rem 0", borderBottom: "1px solid #2a2a2a", cursor: "pointer", transition: "all 0.15s ease" }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.paddingLeft = "0.5rem"; (e.currentTarget as HTMLDivElement).style.color = "#b5ff3a"; }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.paddingLeft = "0"; (e.currentTarget as HTMLDivElement).style.color = "#f0ede8"; }}
-                  >
-                    <span className="ui-label" style={{ color: "#555", minWidth: "1.5rem" }}>{String(i + 1).padStart(2, "0")}</span>
-                    <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.95rem" }}>{track}</span>
-                  </div>
-                ))}
-              </div>
-              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.8rem", color: "#555", marginTop: "1rem" }}>{t("album.formats")}</p>
+          <div style={{ opacity: albumSection.inView ? 1 : 0, transform: albumSection.inView ? "translateY(0)" : "translateY(30px)", transition: "all 0.6s ease 0.2s", display: "flex", flexDirection: "column", gap: "2rem" }}>
+            <iframe
+              src="https://open.spotify.com/embed/album/5gKdR93ZnwaLxg1UAv0xol?utm_source=generator&theme=0"
+              width="100%"
+              height="380"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              style={{ borderRadius: "8px", border: "none" }}
+            />
+            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+              <a href="https://callumbeattiemusic.com/home/" target="_blank" rel="noopener noreferrer" className="btn-outline-lime" style={{ textAlign: "center", justifyContent: "center" }}>
+                {t("album.orderBtn")}
+              </a>
             </div>
           </div>
         </div>
