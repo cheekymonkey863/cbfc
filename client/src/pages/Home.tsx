@@ -16,7 +16,7 @@ const ASSETS = {
   fanCommunity: "https://d2xsxph8kpxj0f.cloudfront.net/310519663398957368/TR9F8icgEr5fDHtduajcGC/fan_community-KWfNVLUAPFntNxB55XiDWX.webp",
   musicTexture: "https://d2xsxph8kpxj0f.cloudfront.net/310519663398957368/TR9F8icgEr5fDHtduajcGC/music_texture-R2eZfEH8xoabhnSeSDKCzr.webp",
   scotlandStage:"https://d2xsxph8kpxj0f.cloudfront.net/310519663398957368/TR9F8icgEr5fDHtduajcGC/scotland_stage-MaBUxMMu3Zbt2ovwtZRREZ.webp",
-  callumPhoto:  "https://d2xsxph8kpxj0f.cloudfront.net/310519663398957368/TR9F8icgEr5fDHtduajcGC/callum_denim_1883_be68d5cf.jpeg",
+  callumPhoto:  "https://d2xsxph8kpxj0f.cloudfront.net/310519663398957368/TR9F8icgEr5fDHtduajcGC/callum_kilt_stage_d8e5060d.jpg",
   indiVinyl:    "https://d2xsxph8kpxj0f.cloudfront.net/310519663398957368/TR9F8icgEr5fDHtduajcGC/callum_indi_vinyl_11908bd5.jpg",
 };
 
@@ -253,7 +253,6 @@ export default function Home() {
       <div ref={statsSection.ref} style={{ backgroundColor: "#161616", borderBottom: "1px solid #2a2a2a", padding: "3rem 2rem" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "2rem", textAlign: "center" }}>
           {[
-            { num: "12,000", key: "stats.hydro" },
             { num: "#1",     key: "stats.scotland" },
             { num: "#4",     key: "stats.uk" },
             { num: "3",      key: "stats.albums" },
