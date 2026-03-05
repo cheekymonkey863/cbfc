@@ -177,13 +177,13 @@ export default function Home() {
           <a href={SOCIALS.callumWebsite} target="_blank" rel="noopener noreferrer" className="btn-lime" style={{ fontSize: "0.85rem", padding: "0.5rem 1.2rem" }}>
             {t("nav.officialSite")}
           </a>
-          <LangToggle />
         </div>
 
-        {/* Mobile: lang toggle + hamburger */}
-        <div className="md:hidden" style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+        {/* Right side: lang toggle always visible + mobile hamburger */}
+        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
           <LangToggle />
           <button onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden"
             style={{ background: "none", border: "none", color: "#f0ede8", fontSize: "1.5rem", cursor: "pointer" }}>
             {menuOpen ? "✕" : "☰"}
           </button>
