@@ -329,3 +329,137 @@
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
+
+/* ── Mobile responsive overrides ── */
+
+/* Ensure images never overflow */
+img { max-width: 100%; }
+
+/* About section: stack on mobile */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-photo {
+    height: 360px !important;
+  }
+}
+
+/* Tour rows: stack on mobile */
+@media (max-width: 639px) {
+  .tour-date-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    padding: 1rem 0 !important;
+  }
+  .tour-date-label {
+    min-width: unset !important;
+    font-size: 0.9rem !important;
+  }
+  .tour-tickets-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Follow cards: 2 columns on mobile */
+@media (max-width: 639px) {
+  .follow-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .callum-follow-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Nav: tighter padding on mobile */
+@media (max-width: 767px) {
+  .nav-inner {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Hero: ensure text doesn't overflow */
+@media (max-width: 479px) {
+  .hero-content {
+    padding: 0 1rem !important;
+  }
+}
+
+/* Buttons: full width on very small screens */
+@media (max-width: 479px) {
+  .btn-group-mobile {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .btn-group-mobile .btn-lime,
+  .btn-group-mobile .btn-outline-lime {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* Spotify embed: taller on mobile for better UX */
+@media (max-width: 639px) {
+  .spotify-embed {
+    height: 460px !important;
+  }
+}
+
+/* Videos grid: single column on mobile */
+@media (max-width: 639px) {
+  .videos-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Stats: single row on mobile */
+@media (max-width: 479px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem !important;
+  }
+  .stats-num {
+    font-size: 2rem !important;
+  }
+}
+
+/* OVO Hydro section: reduce height on mobile */
+@media (max-width: 639px) {
+  .hydro-section {
+    height: auto !important;
+    padding: 4rem 1.5rem !important;
+  }
+}
+
+/* Footer: center on mobile */
+@media (max-width: 639px) {
+  .footer-inner {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
+
+/* Lang toggle: smaller on mobile */
+@media (max-width: 479px) {
+  .lang-toggle-btn {
+    padding: 0.25rem 0.4rem !important;
+    font-size: 0.65rem !important;
+  }
+}
